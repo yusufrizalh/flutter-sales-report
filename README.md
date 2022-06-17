@@ -1,16 +1,8 @@
 # flutter_sales_report
 
-A new Flutter project.
+Aplikasi flutter sederhana untuk menampilkan laporan penjualan produk
 
-## Getting Started
+## Akses REST API
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Kunjungi https://fluttersalesreport.000webhostapp.com/sales-api/list_detail.php untuk mendapatkan laporan umum
+dan https://fluttersalesreport.000webhostapp.com/sales-api/models/products/products_list.php untuk informasi setiap produk
