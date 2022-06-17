@@ -51,7 +51,7 @@ class _ProductEditState extends State<ProductEdit> {
       ),
       body: Container(
         height: double.infinity,
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(16.0),
         child: FormPage(
           formKey: formKey,
           productNameCtrl: productNameCtrl,

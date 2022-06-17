@@ -54,6 +54,10 @@ class _ReportFrontDetailPageState extends State<ReportFrontDetailPage> {
         title: Text("Order ID - ${widget.reportModel.order_id.toString()}"),
       ),
       body: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+          side: BorderSide(color: Colors.grey.shade400),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

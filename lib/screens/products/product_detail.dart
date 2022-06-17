@@ -55,6 +55,7 @@ class _ProductDetailState extends State<ProductDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text('Product Detail - ${widget.productsModel.product_id}'),
         actions: <Widget>[
           IconButton(
             onPressed: (() => confirmDelete(context)),
@@ -66,29 +67,26 @@ class _ProductDetailState extends State<ProductDetail> {
         ],
       ),
       body: Center(
-        child: Container(
-          height: 300.0,
-          padding: EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                "Product ID: ${widget.productsModel.product_id}",
-                style: TextStyle(fontSize: 16.0),
-              ),
-              Padding(padding: EdgeInsets.all(8.0)),
-              Text(
-                "Product Name: ${widget.productsModel.product_name}",
-                style: TextStyle(fontSize: 16.0),
-              ),
-              Padding(padding: EdgeInsets.all(8.0)),
-              Text(
-                "Product Price: IDR. ${widget.productsModel.product_price.toString().replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => "${m[1]},")}",
-                style: TextStyle(fontSize: 16.0),
-              ),
-              Padding(padding: EdgeInsets.all(8.0)),
-            ],
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "Product Name: ${widget.productsModel.product_name}",
+                  style: TextStyle(fontSize: 16.0),
+                ),
+                Padding(padding: EdgeInsets.all(8.0)),
+                Text(
+                  "Product Price: IDR. ${widget.productsModel.product_price.toString().replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => "${m[1]},")}",
+                  style: TextStyle(fontSize: 16.0),
+                ),
+                Padding(padding: EdgeInsets.all(8.0)),
+              ],
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
