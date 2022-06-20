@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unused_import
+// ignore_for_file: prefer_const_constructors, unused_import, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_sales_report/screens/dashboard_page.dart';
@@ -9,14 +9,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Sales Report',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(primarySwatch: Colors.blue),
       // home: ReportFrontPage(),
       home: DashboardPage(),
     );

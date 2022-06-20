@@ -60,7 +60,7 @@ class _ProductEditState extends State<ProductEdit> {
       ),
       bottomNavigationBar: BottomAppBar(
         child: ElevatedButton(
-          style: ElevatedButton.styleFrom(primary: Colors.red),
+          style: ElevatedButton.styleFrom(primary: Colors.blue),
           onPressed: () {
             if (formKey.currentState!.validate()) {
               onConfirmUpdateProduct(context);

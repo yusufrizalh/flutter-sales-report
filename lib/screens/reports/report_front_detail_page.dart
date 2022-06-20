@@ -115,9 +115,15 @@ class _ReportFrontDetailPageState extends State<ReportFrontDetailPage> {
                               fontSize: 14.0, fontWeight: FontWeight.bold),
                         ),
                         subtitle: Text("Price: " +
-                            data.product_price.toString() +
-                            ", Qty: " +
-                            data.product_qty.toString()),
+                            data.product_price.toString().replaceAllMapped(
+                                RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                                (Match m) => "${m[1]},") +
+                            " - Qty: " +
+                            data.product_qty.toString() +
+                            " - Subtotal: " +
+                            data.subtotal.toString().replaceAllMapped(
+                                RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                                (Match m) => "${m[1]},")),
                       );
                     },
                   );
@@ -130,7 +136,7 @@ class _ReportFrontDetailPageState extends State<ReportFrontDetailPage> {
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.red,
+                color: Colors.blue,
               ),
             ),
             Padding(padding: EdgeInsets.only(top: 24.0)),
