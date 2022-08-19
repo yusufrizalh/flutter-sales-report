@@ -16,21 +16,21 @@ class ReportFrontPage extends StatefulWidget {
   State<ReportFrontPage> createState() => _ReportFrontPageState();
 }
 
-class Debouncer {
-  int? milliseconds;
-  VoidCallback? action;
-  Timer? timer;
+// class Debouncer {
+//   int? milliseconds;
+//   VoidCallback? action;
+//   Timer? timer;
 
-  run(VoidCallback action) {
-    if (null != timer) {
-      timer!.cancel();
-    }
-    timer = Timer(
-      Duration(milliseconds: Duration.millisecondsPerSecond),
-      action,
-    );
-  }
-}
+//   run(VoidCallback action) {
+//     if (null != timer) {
+//       timer!.cancel();
+//     }
+//     timer = Timer(
+//       Duration(milliseconds: Duration.millisecondsPerSecond),
+//       action,
+//     );
+//   }
+// }
 
 class _ReportFrontPageState extends State<ReportFrontPage> {
   late Future<List<ReportModel>> report;
@@ -114,7 +114,7 @@ class _ReportFrontPageState extends State<ReportFrontPage> {
                                 " - " +
                                 data.customer_name.toString() +
                                 " - " +
-                                data.subtotal.toString());
+                                data.total.toString());
                             // membuka detail report utk setiap order
                             Navigator.push(
                               context,

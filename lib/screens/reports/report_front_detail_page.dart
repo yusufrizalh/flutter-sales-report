@@ -132,7 +132,7 @@ class _ReportFrontDetailPageState extends State<ReportFrontDetailPage> {
             ),
             Padding(padding: EdgeInsets.all(2.0)),
             Text(
-              "TOTAL: IDR ${widget.reportModel.subtotal.toStringAsFixed(2).replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => "${m[1]},")}",
+              "TOTAL: IDR ${widget.reportModel.total.toStringAsFixed(2).replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => "${m[1]},")}",
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,

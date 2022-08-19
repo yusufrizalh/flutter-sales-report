@@ -5,14 +5,14 @@ class ReportModel {
   late final String customer_name;
   late final int order_id;
   late final String order_date;
-  late final int subtotal;
+  late final int total;
 
   ReportModel({
     required this.cashier_name,
     required this.customer_name,
     required this.order_id,
     required this.order_date,
-    required this.subtotal,
+    required this.total,
   });
 
   factory ReportModel.fromJson(Map<String, dynamic> json) {
@@ -21,7 +21,7 @@ class ReportModel {
       customer_name: json['customer_name'],
       order_id: json['order_id'],
       order_date: json['order_date'],
-      subtotal: json['subtotal'],
+      total: json['total'],
     );
   }
 
@@ -32,6 +32,6 @@ class ReportModel {
         'customer_name': customer_name,
         'order_id': order_id,
         'order_date': order_date,
-        'subtotal': subtotal,
+        'total': total,
       };
 }

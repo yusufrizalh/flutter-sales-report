@@ -149,23 +149,25 @@ class _ProductsPageState extends State<ProductsPage> {
                               onTap: () {
                                 // membuka detail product
                                 Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => ProductDetail(
-                                          productsModel: productList[position]),
-                                    ));
-                                print(
-                                    productList[position]
-                                            .product_id
-                                            .toString() +
-                                        " - " +
-                                        productList[position]
-                                            .product_name
-                                            .toString() +
-                                        " - " +
-                                        productList[position]
-                                            .product_price
-                                            .toString());
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ProductDetail(
+                                      productsModel: productList[position],
+                                    ),
+                                  ),
+                                );
+                                // print(
+                                //     productList[position]
+                                //             .product_id
+                                //             .toString() +
+                                //         " - " +
+                                //         productList[position]
+                                //             .product_name
+                                //             .toString() +
+                                //         " - " +
+                                //         productList[position]
+                                //             .product_price
+                                //             .toString());
                               },
                             ),
                           ],
